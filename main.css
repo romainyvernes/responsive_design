@@ -50,3 +50,282 @@ table {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+/*
+	======
+	Links
+	======
+*/
+
+a {
+	text-decoration: none;
+}
+
+/*
+	======
+	Containers wrapping main sections
+	======
+*/
+
+/* center content within container */
+.container {
+	margin: 0 auto;
+}
+
+/* applies to showcase, popular, and channels sections */
+.container.wide {
+	max-width: 1600px;
+}
+
+/* applies to latest, recommendations, and jobs sections */
+.container.narrow {
+	max-width: 1280px;
+}
+
+/* applies to newsletter section */
+.container.narrower {
+	max-width: 722px;
+}
+
+/*
+	======
+	Social media navigation
+	======
+*/
+
+.social {
+	display: flex;
+}
+
+/*
+	======
+	Main content
+	======
+*/
+
+/* offset header height */
+main {
+	margin-top: 90px;
+}
+
+/*
+	======
+	General website header
+	======
+*/
+
+/* divide header into 2 rows */
+.primary-header {
+	height: 90px;
+	position: sticky;
+	top: 0;
+}
+
+.primary-header .navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* display navigation links horizontally */
+.primary-header .navigation ul {
+	display: flex;
+}
+
+/*
+	======
+	Showcase section
+	======
+*/
+
+/* substitute article for mobile display only */
+.showcase .buy.mobile {
+	display: none;
+}
+
+/* display company logo and tagline horizontally */
+.showcase .company {
+	display: flex;
+}
+
+/* create 8x5 grid */
+.showcase .articles .sub-container {
+	height: 632px;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 8px;
+}
+
+/* first thumbnail in showcase articles */
+.showcase .thumbnail:first-child {
+	grid-area: 1 / 1 / 4 / 5;
+}
+
+/* second thumbnail in showcase articles on top row */
+.showcase .thumbnail:nth-child(2) {
+	grid-area: 1 / 5 / 3 / 7;
+}
+
+/* third thumbnail in showcase articles on top row */
+.showcase .thumbnail:nth-child(3) {
+	grid-area: 1 / 7 / 3 / 9;
+}
+
+/* first thumbnail in showcase articles on bottom row */
+.showcase .thumbnail.buy {
+	grid-area: 4 / 1 / 6 / 5;
+}
+
+/* second thumbnail in showcase articles on bottom row */
+.showcase .thumbnail:nth-child(5) {
+	grid-area: 3 / 5 / 6 / 9;
+}
+
+/*
+	======
+	Popular articles
+	======
+*/
+
+.popular ol {
+	display: flex;
+}
+
+/*
+	======
+	Latest articles
+	======
+*/
+
+/* create 4x2 grid */
+.latest ul {
+	height: 56vw;
+	max-height: 605px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 40px;
+}
+
+/*
+	======
+	Channels
+	======
+*/
+
+/* create 5x1 grid and allow horizontal scroll for small display */
+.channels ul {
+	display: flex;
+	overflow: auto;
+	gap: 20px;
+}
+
+.channels .thumbnail {
+	flex-basis: 25%;
+	min-height: 232px;
+}
+
+/*
+	======
+	Recommendations
+	======
+*/
+
+/* display player and selection next to each other */
+.recommendations .container {
+	display: flex;
+	gap: 24px;
+}
+
+.recommendations .player {
+	flex-grow: 1;
+}
+
+/* READJUST LATER */
+.recommendations .player iframe {
+	height: 43vw;
+	max-height: 544px;
+}
+
+/* enable vertical scroll when content items exceed container's size */
+.recommendations .selection {
+	overflow: auto;
+	flex-grow: 0.5;
+}
+
+/*
+	======
+	Jobs section
+	======
+*/
+
+.jobs .sub-container {
+	display: flex;
+	gap: 20px;
+}
+
+/* split container evenly between description and illustrations */
+.jobs .description,
+.jobs .illustrations {
+	flex-grow: 1;
+}
+
+/* create 2x2 grid */
+.jobs .illustrations {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 144px;
+}
+
+/* display partners' logos next to each other and create new line from top to
+bottom when logos fill an entire line */
+.jobs .partners {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.jobs .partners li {
+	display: flex;
+}
+
+/*
+	======
+	General website footer
+	======
+*/
+
+.primary-footer {
+	height: 485px;
+	background: mediumpurple;
+}
+
+/* display wrapper with company logo next to wrapper with navigation links */
+.primary-footer .navigation .container {
+	display: flex;
+}
+
+/* display company logo and social media links one on top of each other */
+.primary-footer .connect {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	background: mediumturquoise;
+}
+
+/* display navigation links lists next to each other */
+.primary-footer .links {
+	display: flex;
+	flex-grow: 1.2;
+	background: mediumseagreen;
+}
+
+.primary-footer .copyright {
+	text-align: center;
+}
+
+/* to remove */
+svg {
+	height: 10px;
+	width: 10px;
+}
