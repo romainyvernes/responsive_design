@@ -11,215 +11,325 @@
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
           crossorigin="anonymous" 
           referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;400;600;700&family=Roboto:wght@100;300;400;500;700&family=Sarpanch:wght@400;500;700&family=Be+Vietnam:wght@300;400;500;700;800&display=swap" 
+          rel="stylesheet">
   </head>
   <body>
     <header class="primary-header">
-      <div class="navigation">
-        <a href="#" class="home-link"><svg></svg></a>
+      <div class="navigation lightgrey-background darkgrey-text secondary-font2">
+        <a href="#" class="sidebar-link"><i class="material-icons">apps</i></a>
+        <a href="#" class="home-link">
+          <img src="assets/logos/company_logo.svg" 
+               alt="TNW logo" 
+               class="company-logo">
+        </a>
         <nav>
           <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#">HOME</a></li>
+            <li>
+              <a href="#" class="vertical-align expand">
+                NEWS <i class="material-icons">expand_more</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="vertical-align expand">
+                EVENTS <i class="material-icons">expand_more</i>
+              </a>
+            </li>
+            <li><a href="#">PROGRAMS</a></li>
+            <li><a href="#">SPACES</a></li>
+            <li>
+              <a href="#" class="vertical-align expand">
+                MORE <i class="material-icons">expand_more</i>
+              </a>
+            </li>
           </ul>
         </nav>
-        <a href="#" class="newsletter-link"><i></i></a>
+        <a href="#" class="newsletter-link"><i class="fas fa-envelope"></i></a>
       </div>
-      <div class="conference">
-        <a href="#"></a>
-        <p></p>
+      <div class="conference yellow-background">
+        <a href="#">
+          <p>Rub shoulders with leading experts and industry disruptors at TNW Conference →</p>
+        </a>
       </div>
     </header>
     <main class="home">
       <section class="showcase">
         <div class="container wide">
-          <header class="company">
-            <a href="#"><svg></svg></a>
-            <h1></h1>
+          <header class="company darkgrey-text">
+            <a href="#">
+              <img src="assets/logos/company_logo.svg" 
+                   alt="TNW logo" 
+                   class="company-logo">
+            </a>
+            <h1>The heart of tech</h1>
           </header>
           <section class="articles">
             <div class="sub-container">
               <article class="thumbnail">
-                <a href="#"></a>
-                <header>
-                  <h3></h3>
-                  <p></p>
-                </header>
-                <img>
+                <a href="#">
+                  <h4 class="secondary-font2">APPLE</h4>
+                  <h3 class="highlight secondary-font3">
+                    4 things we learned from Apple’s bombastic earnings call
+                  </h3>
+                </a>
               </article>
               <article class="thumbnail">
-                <a href="#"></a>
-                <header>
-                  <h3></h3>
-                  <p></p>
-                </header>
-                <img>
+                <a href="#">
+                  <h4 class="secondary-font2">NEURAL</h4>
+                  <h3 class="regular">
+                    Big tech tries to derail EU AI policy with ‘warnings’ from 
+                    US think tank
+                  </h3>
+                </a>
               </article>
               <article class="thumbnail">
-                <a href="#"></a>
-                <header>
-                  <h3></h3>
-                  <p></p>
-                </header>
-                <img>
+                <a href="#">
+                  <h4 class="secondary-font2">REVIEW</h4>
+                  <h3 class="regular">The MaxPro is a full gym that fits in a backpack</h3>
+                </a>
               </article>
-              <article class="thumbnail buy">
-                <header>
-                  <p></p>
-                  <a href="#"></a>
-                </header>
-                <img>
+              <article class="buy">
+                <h2 class="secondary-font3">This is the one event you don't want to miss</h2>
+                <h2 class="secondary-font3">TNW Conference goes hybrid</h2>
+                <a href="#" class="buy-link">GET TICKETS</a>
               </article>
               <article class="thumbnail">
-                <a href="#"></a>
-                <header>
-                  <h3></h3>
-                  <p></p>
-                </header>
-                <img>
+                <a href="#">
+                  <h4 class="secondary-font2">VIDEO</h4>
+                  <h3 class="highlight secondary-font3">What size iPad Pro should you buy?</h3>
+                </a>
               </article>
             </div>
             <!-- article to display only on mobile devices -->
             <article class="buy mobile">
-              <header>
-                <p></p>
-                <a href="#"></a>
-              </header>
-              <img>
+              <h2 class="secondary-font3">This is the one event you don't want to miss</h2>
+              <h2 class="secondary-font3">TNW Conference goes hybrid</h2>
+              <a href="#" class="buy-link">GET TICKETS</a>
             </article>
             <!----------------------------------------------->
           </section>
         </div>
       </section>
-      <section class="popular">
+      <section class="popular lightgrey-background">
         <div class="container wide">
-          <h2></h2>
-          <ol>
+          <h2 class="secondary-font1 lightgrey-text">
+            POPULAR ARTICLES TODAY
+          </h2>
+          <ol class="secondary-font3">
             <li class="headline">
-              <a href="#"></a>
-              <p></p>
+              <a href="#">
+                <h3 class="lightpurple-underline">
+                  Object-oriented programming is dead. Wait, really?
+                </h3>
+              </a>
             </li>
             <li class="headline">
-              <a href="#"></a>
-              <p></p>
+              <a href="#">
+                <h3 class="lightpurple-underline">
+                  In scientific first, brain implant turns paralyzed man’s 
+                  thoughts into ‘speech’
+                </h3>
+              </a>
             </li>
             <li class="headline">
-              <a href="#"></a>
-              <p></p>
+              <a href="#">
+                <h3 class="lightpurple-underline">
+                  Lying, corrupt, anti-American cops are running amok with AI
+                </h3>
+              </a>
             </li>
             <li class="headline">
-              <a href="#"></a>
-              <p></p>
+              <a href="#">
+                <h3 class="lightpurple-underline">
+                  What is entanglement in quantum physics? We’ll explain in 
+                  under 5 minutes
+                </h3>
+              </a>
             </li>
             <li class="headline">
-              <a href="#"></a>
-              <p></p>
+              <a href="#">
+                <h3 class="lightpurple-underline">What size iPad Pro should you buy?</h3>
+              </a>
             </li>
           </ol>
         </div>
       </section>
-      <section class="latest">
+      <section class="latest secondary-font3">
         <div class="container narrow">
+          <h2>Latest stories</h2>
           <ul>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/phones.jpeg"
+                   alt="Two smartphones side by side">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Twitter is giving online shopping another go
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>24 minutes ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/black_hole.jpeg"
+                   alt="Black hole with photo of man superimposed on top of it">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Immortality or spaghetti? Why parking your spaceship inside a 
+                    black hole is a huge gamble
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>41 minutes ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/meteor.jpeg"
+                   alt="Comet drifting in deep space">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Harvard scientists are using AI to search for alien technology
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>3 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/yellow_car.jpeg"
+                   alt="View of Earth with the Sun in the distance and a Porsche floating above the planet">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Beware, Musk and Bezos — Porsche is joining the space race
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>4 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/qr_code.jpeg"
+                   alt="QR code with a puzzle game box on top of it">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    This jigsaw puzzle could earn you $1 million. No, seriously…
+                    it could
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>13 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/hand.jpeg"
+                   alt="Hand holding a small drone">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    This Air Pix drone fits in your pocket just for taking cool 
+                    aerial selfies
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>13 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/interview.jpeg"
+                   alt="Suited-up man sitting at a desk, looking straight at us, and woman facing him holding her face in her left hand">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Stop spending cash on giving workers skills that’ll be 
+                    useless in a decade
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>13 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <div class="headline">
-                <p></p>
-                <p><time></time></p>
-              </div>
+              <a href="#">
+                <img src="assets/images/laptop.jpeg"
+                   alt="Laptop on a desk">
+                <div class="headline">
+                  <h3 class="lightpurple-underline">
+                    Data scientists continue to be the sexiest hires around
+                  </h3>
+                  <p class="primary-font lightgrey-text">
+                    <time>13 hours ago</time>
+                  </p>
+                </div>
+              </a>
             </li>
           </ul>
-          <a href="#" class="all"></a>
+          <div class="all primary-font">
+            <a href="#" class="cyan-background">
+              ALL NEWS<i class="material-icons darkgrey-text">chevron_right</i>
+            </a>
+          </div>
         </div>
       </section>
-      <section class="channels">
+      <section class="channels lightgrey-background secondary-font3">
         <div class="container wide">
-          <h2></h2>
+          <h2>Explore our channels</h2>
           <ul>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/plugged.svg" 
+                     alt="Plugg channel logo"
+                     height="30px">
+                <h3>Your sardonic source for consumer tech stories</h3>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/neural.svg" 
+                     alt="Neural channel logo"
+                     height="25px">
+                <h3>Human-centric AI news and analysis</h3>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/shift.svg" 
+                     alt="Shift channel logo"
+                     height="28px">
+                <h3>Driving the future of sustainable mobility</h3>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/growth_quarters.svg" 
+                     alt="Growth Quarters channel logo"
+                     height="45px">
+                <h3>No-nonsense perspectives on startup growth</h3>
+              </a>
             </li>
             <li class="thumbnail">
-              <a href="#"></a>
-              <img>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/hardfork.svg" 
+                     alt="Hard Fork channel logo"
+                     height="33px">
+                <h3>Inside money, markets, and Big Tech</h3>
+              </a>
             </li>
           </ul>
         </div>
@@ -227,56 +337,96 @@
       <section class="newsletter">
         <div class="container narrower">
           <form>
-            <h2></h2>
-            <p></p>
-            <div class="email">
-              <i></i>
-              <input type="email">
-              <button></button>
+            <h2 class="secondary-font3">
+              Get the snarkiest newsletter in tech
+            </h2>
+            <p>
+              Subscribe to our twice-weekly <a class="cyan-text" href="#">Big 
+              Spam</a> or check out our <a class="cyan-text" href="#">other 
+              newsletters.</a>
+            </p>
+            <div class="email lightgrey-text">
+              <i class="fas fa-envelope"></i>
+              <input class="darkgrey-text" type="email" placeholder="Email">
+              <button>SUBSCRIBE</button>
             </div>
           </form>
-        </div>
-        <ul class="social">
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-          <li><a href="#"><i></i></a></li>
-        </ul>
-      </section>
-      <section class="recommendations">
-        <div class="container narrow">
-          <div class="player">
-            <iframe></iframe>
-            <footer>
-              <p></p>
-              <p><time></time></p>
-            </footer>
-          </div>
-          <ul class="selection">
-            <li>
-              <a href="#"></a>
-              <img>
-              <p></p>
-            </li>
-            <li>
-              <a href="#"></a>
-              <img>
-              <p></p>
-            </li>
-            <li>
-              <a href="#"></a>
-              <img>
-              <p></p>
-            </li>
-            <li>
-              <a href="#"></a>
-              <img>
-              <p></p>
-            </li>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-flipboard"></i></a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
           </ul>
+        </div>
+      </section>
+      <section class="recommendations lightgrey-background">
+        <div class="container narrow">
+          <h2 class="secondary-font3">Watch what we made you</h2>
+          <div class="sub-container">
+            <div class="player">
+              <iframe width="560" 
+                      height="315" 
+                      src="https://www.youtube.com/embed/kIie5LVh7NE" 
+                      title="YouTube video player" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+              <footer>
+                <h3>What size iPad Pro should you buy?</h3>
+                <p class="lightgrey-text"><time>Jul 26, 2021</time></p>
+              </footer>
+            </div>
+            <ul class="selection">
+              <li>
+                <a href="#">
+                  <img src="assets/images/ipad.jpeg" alt="Man holding two Ipads">
+                  <h3 class="lightpurple-underline">
+                    What size iPad Pro should you buy?
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/images/airtags.jpeg" 
+                      alt="Man holding Airtags">
+                  <h3 class="lightpurple-underline">
+                    Apple AirTags review: The Find My revolution
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/images/speaker.jpeg" 
+                      alt="Man holding a speaker">
+                  <h3 class="lightpurple-underline">
+                    Sonos Roam review: Smart speaker, smarter business
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/images/guitar.jpeg" 
+                      alt="Man playing the guitar">
+                  <h3 class="lightpurple-underline">
+                    Learning guitar is better than meditation
+                  </h3>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/images/headset.jpeg" 
+                      alt="Man wearing oversized headset">
+                  <h3 class="lightpurple-underline">
+                    Why your hi-fi setup needs these headphones
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="jobs">
@@ -284,92 +434,146 @@
           <div class="sub-container">
             <section class="description">
               <header>
-                <p></p>
-                <h2></h2>
+                <h4 class="secondary-font2 darkgrey-text">REACH YOUR GOALS</h4>
+                <h2 class="secondary-font3">Work with us</h2>
               </header>
-              <p></p>
-              <a href="#"></a>
+              <p class="darkgrey-text">
+                TNW takes center stage in the tech industry, offering creative 
+                media campaigns, sizzling tech events, bespoke innovation 
+                programs, and prime office locations in Amsterdam. Want to 
+                engage your audience more effectively, innovate your business, 
+                and position your brand in front of a digital-savvy audience?
+              </p>
+              <div class="connect-link">
+                <a href="#" class="cyan-background">GET IN TOUCH</a>
+              </div>
             </section>
-            <ul class="illustrations">
+            <ul class="illustrations secondary-font3">
               <li>
-                <img>
-                <p></p>
+                <img src="assets/logos/pen.svg" alt="Drawing of fountain pen">
+                <h3>Media</h3>
               </li>
               <li>
-                <img>
-                <p></p>
+                <img src="assets/logos/microphone.svg" 
+                     alt="Drawing of microphone">
+                <h3>Events</h3>
               </li>
               <li>
-                <img>
-                <p></p>
+                <img src="assets/logos/lamp.svg" 
+                     alt="Drawing of an office lamp">
+                <h3>Spaces</h3>
               </li>
               <li>
-                <img>
-                <p></p>
+                <img src="assets/logos/bag.svg" alt="Drawing of a bag">
+                <h3>Programs</h3>
               </li>
             </ul>
           </div>
-          <ul class="partners">
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-            <li><a href="#"><img></a></li>
-          </ul>
+          <div class="sub-container">
+            <ul class="partners">
+              <li>
+                <a href="#">
+                  <img src="assets/logos/google.svg" alt="Google logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/etoro.svg" alt="Etoro logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/ibm.svg" alt="IBM logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/microsoft.svg" alt="Microsoft logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/paypal.svg" alt="Paypal logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/vodafone.svg" alt="Vodafone logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/accenture.svg" alt="Accenture logo">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/logos/mckinsey_company.svg" 
+                      alt="McKinsey & Company logo">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
     <footer class="primary-footer">
-      <section class="navigation">
-        <div class="container narrow">
-          <div class="connect">
+      <div class="container narrow">
+        <section class="navigation">
+          <div class="company">
             <div>
-              <a href="#"><svg></svg></a>
-              <p></p>
+              <a href="#">
+                <img src="assets/logos/company_logo.svg" 
+                     alt="TNW logo" 
+                     class="company-logo">
+              </a>
+              <p>The heart of tech</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
-              <li><a href="#"><i></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fab fa-flipboard"></i></a></li>
+              <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
             </ul>
           </div>
           <div class="links">
             <div class="list">
-              <h2></h2>
-              <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+              <h2 class="secondary-font1">MORE TNW</h2>
+              <ul class="cyan-text">
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Spaces</a></li>
+                <li><a href="#">Newsletters</a></li>
               </ul>
             </div>
             <div class="list">
-              <h2></h2>
-              <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+              <h2 class="secondary-font1">ABOUT TNW</h2>
+              <ul class="cyan-text">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Partner with us</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Cookie Statement</a></li>
+                <li><a href="#">Privacy Statement</a></li>
+                <li><a href="#">Editorial Policy</a></li>
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="copyright">
-        <p></p>
-        <p></p>
+        </section>
+      </div>
+      <section class="copyright lightgrey-text">
+        <p>
+          TNW is a <a href="#">Financial Times</a> company.
+        </p>
+        <p>
+          Copyright &copy; 2006-2021, The Next Web B.V. Made with &#60;3 in 
+          Amsterdam.
+        </p>
       </section>
     </footer>
   </body>

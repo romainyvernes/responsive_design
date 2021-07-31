@@ -51,6 +51,39 @@ table {
   box-sizing: border-box;
 }
 
+/* set default font type and weight */
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+/*
+	======
+	Buttons
+	======
+*/
+
+button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	font: inherit;
+}
+
+/*
+	======
+	Inputs
+	======
+*/
+
+input {
+	border: none;
+	font: inherit;
+	color: inherit;
+	width: 100%;
+	outline: none;
+}
+
 /*
 	======
 	Links
@@ -59,6 +92,108 @@ table {
 
 a {
 	text-decoration: none;
+	color: inherit;
+}
+
+/*
+	======
+	Headings
+	======
+*/
+
+h2 {
+	font-size: 2.3em;
+	font-weight: 800;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/*
+	======
+	Background colors
+	======
+*/
+
+/* applies to navgiation within page header, and popular, channels, and 
+recommendations sections */
+.lightgrey-background {
+	background: #f7f8f8;
+}
+
+/* applies to conference section within page header */
+.yellow-background {
+	background: #fd3;
+}
+
+.cyan-background {
+	background: #0cc;
+}
+
+/*
+	======
+	Text colors
+	======
+*/
+
+/* applies to popular section heading, time elements within articles, and
+copyright section */
+.lightgrey-text {
+	color: #a7aab2;
+}
+
+/* applies to navbar within header, tagline at the top of the page, and 
+subheader and description paragraph within jobs section */
+.darkgrey-text {
+	color: #505666;
+}
+
+.cyan-text {
+	color: #0cc;
+}
+
+/*
+	======
+	Text fonts
+	======
+*/
+
+/* default font; class to use for isolated elements in sections where default
+was overriden with a secondary font for the entire section */
+.primary-font {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* applies to popular section heading, and navigation lists headings in page
+footer */
+.secondary-font1 {
+	font-family: 'Antonio', sans-serif;
+}
+
+/* applies to navbar headings in page header, and h4 headings */
+.secondary-font2 {
+	font-family: 'Sarpanch', sans-serif;
+}
+
+/* applies to largest thumbnails in showcase section; h3 headings in popular,
+latest, channels, and jobs sections; and h2 headings (except for h2 in popular
+section) */
+.secondary-font3 {
+	font-family: 'Be Vietnam', sans-serif;
+}
+
+/*
+	======
+	Text underline
+	======
+*/
+
+.lightpurple-underline:hover {
+	text-decoration: underline #d200934d 2px;
+	text-underline-offset: 0.1em;
 }
 
 /*
@@ -69,7 +204,8 @@ a {
 
 /* center content within container */
 .container {
-	margin: 0 auto;
+	margin: 5em auto;
+	padding: 0 2em;
 }
 
 /* applies to showcase, popular, and channels sections */
@@ -84,7 +220,7 @@ a {
 
 /* applies to newsletter section */
 .container.narrower {
-	max-width: 722px;
+	max-width: 815px;
 }
 
 /*
@@ -95,17 +231,16 @@ a {
 
 .social {
 	display: flex;
+	gap: 15px;
 }
 
-/*
-	======
-	Main content
-	======
-*/
+.social li {
+	font-size: 27px;
+	opacity: 0.5;
+}
 
-/* offset header height */
-main {
-	margin-top: 90px;
+.social li:hover {
+	opacity: 1;
 }
 
 /*
@@ -119,16 +254,72 @@ main {
 	height: 90px;
 	position: sticky;
 	top: 0;
+	z-index: 10;
+}
+
+.primary-header .company-logo {
+	height: 16px;
 }
 
 .primary-header .navigation {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	padding: 1em 1.5em;
+	font-size: 0.9em;
+}
+
+.primary-header .expand {
+	cursor: default;
+}
+
+/* link to display navigation links as sidebar for small screens */
+.primary-header .sidebar-link {
+	display: none;
+}
+
+.primary-header .sidebar-link i {
+	font-size: 27px;
+}
+
+/* company logo */
+.primary-header .home-link svg {
+	height: 16px;
 }
 
 /* display navigation links horizontally */
 .primary-header .navigation ul {
 	display: flex;
+	align-items: center;
+	gap: 1.5em;
+}
+
+/* lightens up the "expand" icons' color */
+.primary-header .navigation ul i {
+	opacity: 0.4;
+}
+
+/* targets list items with an icon next to the label */
+.vertical-align {
+	display: flex;
+	align-items: center;
+}
+
+/* targets envelope icon */
+.primary-header .newsletter-link {
+	color: #cdd0d4;
+	font-size: 1.3em;
+}
+
+.primary-header .conference {
+	box-shadow: 
+						0 20px 40px 5px rgba(0, 0, 0, 0.1),
+			inset 0 8px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.primary-header .conference p {
+	font-size: 0.85em;
+	padding: 1em 1.5em;
 }
 
 /*
@@ -137,14 +328,52 @@ main {
 	======
 */
 
-/* substitute article for mobile display only */
-.showcase .buy.mobile {
-	display: none;
-}
-
 /* display company logo and tagline horizontally */
 .showcase .company {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 2em;
+	margin: 0 1em 2.5em 1em;
+}
+
+/* company logo */
+.showcase .company-logo {
+	height: 45px;
+}
+
+/* sets standard font size and weight for the entire "articles" section */
+.showcase .articles {
+	color: #fff;
+}
+
+/* main headings within thumbnails */
+.showcase h3 {
+	/* lower line height applicable to h3 headings */
+	line-height: 1.1;
+}
+
+/* set smaller font size and weight for subheadings above article headlines */
+.showcase h4 {
+	font-size: 0.75em;
+	margin-bottom: 0.3em;
+}
+
+/* enable flexbox on all thumbnails */
+.showcase .thumbnail a,
+.showcase .buy {
+	display: flex;
+	flex-direction: column;
+}
+
+.showcase .thumbnail a {
+	background: linear-gradient(rgba(0, 0, 0, 0.1), #000);
+	padding: 1.6em;
+	/* aligns text at the bottom of thumbnails */
+	justify-content: flex-end;
+	/* makes entire thumbnail a clickable link */
+	min-width: 100%;
+	min-height: 100%;
 }
 
 /* create 8x5 grid */
@@ -159,26 +388,72 @@ main {
 /* first thumbnail in showcase articles */
 .showcase .thumbnail:first-child {
 	grid-area: 1 / 1 / 4 / 5;
+	background: url("assets/images/apple_ceo.jpeg") center/cover no-repeat;
 }
 
 /* second thumbnail in showcase articles on top row */
 .showcase .thumbnail:nth-child(2) {
 	grid-area: 1 / 5 / 3 / 7;
+	background: url("assets/images/european_union.jpeg") center/cover no-repeat;
 }
 
 /* third thumbnail in showcase articles on top row */
 .showcase .thumbnail:nth-child(3) {
 	grid-area: 1 / 7 / 3 / 9;
-}
-
-/* first thumbnail in showcase articles on bottom row */
-.showcase .thumbnail.buy {
-	grid-area: 4 / 1 / 6 / 5;
+	background: url("assets/images/tech_equipment.jpeg") center/cover no-repeat;
 }
 
 /* second thumbnail in showcase articles on bottom row */
 .showcase .thumbnail:nth-child(5) {
 	grid-area: 3 / 5 / 6 / 9;
+	background: url("assets/images/video_gif.gif") center/cover no-repeat;
+}
+
+/* applies to both "buy" thumbnails inside and outside of grid */
+.showcase .buy {
+	grid-area: 4 / 1 / 6 / 5;
+	background:
+			linear-gradient(rgba(0, 0, 0, 0.1), #000),
+			url("assets/images/conference-banner.jpeg") center/cover no-repeat;
+	justify-content: center;
+	align-items: center;
+	/* increase font thickness for "buy" thumbnails */
+	font-weight: 700;
+	font-size: 0.6em;
+	padding: 2em;
+	text-align: center;
+}
+
+/* headings in first and last thumbnails */
+.showcase .highlight {
+	font-size: 2.3em;
+	font-weight: 700;
+}
+
+/* headings in second and third thumbnails on grid's top row */
+.showcase .regular {
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+/* headings within "buy" thumbnails */
+.showcase .buy h2 {
+	margin: 0.1em 0;
+}
+
+/* "get tickets" link within "buy" thumbnails */
+.showcase .buy-link {
+	margin-top: 1em;
+	font-size: 1.4em;
+	font-weight: 400;
+	padding: 1.2em 1.7em;
+	border: 1px solid #fff;
+	border-radius: 25px;
+}
+
+/* substitute article for mobile display only */
+.showcase .mobile {
+	display: none;
 }
 
 /*
@@ -187,8 +462,47 @@ main {
 	======
 */
 
+.popular .container {
+	padding: 4.7em 5em;
+}
+
+/* sets styling for popular section heading */
+.popular h2 {
+	font-size: 1.8em;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 2.8em;
+}
+
 .popular ol {
+	/* display items within list horizontally */
 	display: flex;
+	gap: 35px;
+	/* remove default list style */
+	list-style-type: none;
+	/* create counter and set it to 0 */
+	counter-reset: counter;
+}
+
+/* ensures headlines are spread out evenly on x axis  */
+.popular .headline {
+	flex-basis: 20%;
+}
+
+/* display each digit next to its corresponding heading */
+.popular .headline a {
+	display: flex;
+}
+
+/* digits next to headlines */
+.popular .headline a::before {
+	/* increment counter by 1 */
+	counter-increment: counter;
+	/* insert the current value of counter within anchor element before h3 */
+	content: counter(counter);
+	margin: -0.2em 0.5em 0 0;
+	font: 600 2.1em "Antonio", sans-serif;
+	color: #d20094;
 }
 
 /*
@@ -197,6 +511,11 @@ main {
 	======
 */
 
+.latest .container {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
 /* create 4x2 grid */
 .latest ul {
 	height: 56vw;
@@ -204,7 +523,51 @@ main {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr 1fr;
-	gap: 40px;
+	gap: 30px;
+}
+
+/* main heading within "latest" section */
+.latest h2 {
+	margin-bottom: 2em;
+}
+
+/* fit images within grid cells */
+.latest .thumbnail img {
+	width: 100%;
+}
+
+/* articles' headlines */
+.latest h3 {
+	margin: 0.8em 0 0.6em 0;
+}
+
+/* articles' publication time */
+.latest p {
+	font-size: 0.9em;
+}
+
+/* "all news" link container */
+.latest .all {
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+	color: #fff;
+	margin: 3em 0;
+}
+
+/* "all news" link */
+.latest .all a {
+	padding: 0.7em 0.9em 0.7em 2em;
+	font-weight: 400;
+	border-radius: 30px;
+	display: inline-flex;
+	align-items: center;
+}
+
+/* targets icon next to "all news" */
+.latest .all i {
+	font-size: 2.5em;
+	opacity: 0.5;
 }
 
 /*
@@ -213,16 +576,142 @@ main {
 	======
 */
 
+.channels .container {
+	padding-top: 6.5em;
+	padding-bottom: 6.5em;
+}
+
+.channels h2 {
+	margin-bottom: 2em;
+}
+
 /* create 5x1 grid and allow horizontal scroll for small display */
 .channels ul {
 	display: flex;
 	overflow: auto;
-	gap: 20px;
+	gap: 15px;
 }
 
 .channels .thumbnail {
 	flex-basis: 25%;
 	min-height: 232px;
+}
+
+.channels .thumbnail a {
+	padding: 2.5em 1.2em;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	/* makes entire thumbnail a clickable link */
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.channels .thumbnail:first-child {
+	background: url("assets/images/channel1.webp") center/cover no-repeat;
+}
+
+.channels .thumbnail:nth-child(2) {
+	background: url("assets/images/channel2.jpeg") center/cover no-repeat;
+}
+
+.channels .thumbnail:nth-child(3) {
+	background: url("assets/images/channel3.jpeg") center/cover no-repeat;
+}
+
+.channels .thumbnail:nth-child(4) {
+	background: url("assets/images/channel4.jpeg") center/cover no-repeat;
+}
+
+.channels .thumbnail:nth-child(5) {
+	background: url("assets/images/channel5.webp") center/cover no-repeat;
+}
+
+/*
+	======
+	Newsletter
+	======
+*/
+
+.newsletter {
+	/* first layer is the background image, second layer is the color*/
+	background: 
+			fixed url("assets/images/spacesbg.webp") center/cover,
+			#000;
+	color: #fff;
+	text-align: center;
+}
+
+.newsletter .container {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+/* main heading in newsletter section */
+.newsletter h2 {
+	font-size: 2.7em;
+}
+
+/* line of text below heading */
+.newsletter p {
+	margin: 1.5em 0;
+}
+
+/* targets links within text */
+.newsletter p a {
+	font-weight: 400;
+}
+
+.newsletter p a:hover {
+	color: #fff;
+}
+
+/* email container */
+.newsletter .email {
+	background: #fff;
+	font-size: 1em;
+	display: flex;
+	align-items: stretch;
+	border-radius: 5px;
+}
+
+/* icon placed before input field */
+.newsletter .email i {
+	margin: 0 0.7em;
+	align-self: center;
+	opacity: 0.5;
+}
+
+.newsletter .email input {
+	padding: 0.9em 0;
+}
+
+/* lighten up font color of placeholder inside input field */
+.newsletter .email input::placeholder {
+	opacity: 0.7;
+}
+
+.newsletter .email:focus-within > i {
+	opacity: 1;
+}
+
+/* subscribe button after input field */
+.newsletter .email button {
+	font-size: 0.9em;
+	font-weight: 400;
+	margin-right: 0.5em;
+}
+
+.newsletter .email button:hover {
+	cursor: pointer;
+}
+
+.newsletter .social {
+	justify-content: center;
+	margin: 2em 0;
 }
 
 /*
@@ -231,26 +720,85 @@ main {
 	======
 */
 
-/* display player and selection next to each other */
 .recommendations .container {
+	padding-top: 6em;
+	padding-bottom: 6em;
+}
+
+.recommendations h2 {
+	margin-bottom: 2em;
+}
+
+/* display player and selection next to each other */
+.recommendations .sub-container {
 	display: flex;
 	gap: 24px;
+	height: 50vw;
+	max-height: 689px;
 }
 
+/* fill remaining space not occupied by selection container */
 .recommendations .player {
-	flex-grow: 1;
+	width: 100%;
 }
 
-/* READJUST LATER */
-.recommendations .player iframe {
-	height: 43vw;
-	max-height: 544px;
+/* fit entire width of container and set height */
+.recommendations iframe {
+	width: 100%;
+	height: 75%;
 }
 
-/* enable vertical scroll when content items exceed container's size */
+/* container with heading below video */
+.recommendations .player footer {
+	height: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5em;
+	background: #000;
+	color: #fff;
+	margin-top: -0.2em;
+	border-top: 2px solid #292929;
+}
+
+/* video heading */
+.recommendations .player h3 {
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+/* video publication date */
+.recommendations .player p {
+	font-size: 0.8em;
+	margin-top: 0.5em;
+}
+
+/* container with list of thumbnails */
 .recommendations .selection {
+	/* enable vertical scroll when content items exceed container's size */
 	overflow: auto;
-	flex-grow: 0.5;
+	flex-basis: 290px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-bottom: 2em;
+}
+
+/* thumbnail container */
+.recommendations .selection li {
+	height: 182px;
+}
+
+/* fit thumbnails images within their containers' width and set height */
+.recommendations img {
+	width: 100%;
+	height: 126px;
+	object-fit: cover;
+}
+
+/* headline within thumbnail */
+.recommendations .selection h3 {
+	margin-top: 0.5em;
 }
 
 /*
@@ -259,15 +807,35 @@ main {
 	======
 */
 
-.jobs .sub-container {
-	display: flex;
-	gap: 20px;
+.jobs .container {
+	padding-top: 1em;
+	margin-bottom: 4em;
 }
 
-/* split container evenly between description and illustrations */
+/* target first sub-container under jobs section */
+.jobs .sub-container:first-child {
+	display: flex;
+	gap: 40px;
+}
+
+/* split container evenly between the two sections */
 .jobs .description,
 .jobs .illustrations {
-	flex-grow: 1;
+	flex-basis: 50%;
+}
+
+.jobs .description p {
+	font-size: 1.15em;
+	line-height: 1.5;
+	margin: 1.5em 0 2.5em 0;
+}
+
+.jobs .connect-link a {
+	color: #fff;
+	padding: 1.2em 2em;
+	border-radius: 5px;
+	font-size: 0.85em;
+	font-weight: 400;
 }
 
 /* create 2x2 grid */
@@ -275,6 +843,24 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-auto-rows: 144px;
+	gap: 0 20px;
+}
+
+/* illustration thumbnails */
+.jobs .illustrations li {
+	display: flex;
+	align-items: center;
+}
+
+/* illustration logos */
+.jobs .illustrations img {
+	height: 112px;
+}
+
+/* illustration headings */
+.jobs .illustrations h3 {
+	margin-left: 1em;
+	font-size: 1.1em;
 }
 
 /* display partners' logos next to each other and create new line from top to
@@ -282,10 +868,20 @@ bottom when logos fill an entire line */
 .jobs .partners {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 3em 2em 0 2em;
+	/* ensure list can never grow larger than window width */
+	max-width: 100%;
 }
 
+/* company logos */
 .jobs .partners li {
-	display: flex;
+	flex-basis: 12.5%;
+	opacity: 0.5;
+}
+
+/* make company logos appear darker on hover */
+.jobs .partners li:hover {
+	opacity: 0.8;
 }
 
 /*
@@ -296,36 +892,90 @@ bottom when logos fill an entire line */
 
 .primary-footer {
 	height: 485px;
-	background: mediumpurple;
+	background: #000;
+	color: #fff;
+}
+
+.primary-footer .container {
+	margin: 0 auto;
+}
+
+.primary-footer .company-logo {
+	height: 38px;
+	margin-bottom: 1em;
 }
 
 /* display wrapper with company logo next to wrapper with navigation links */
-.primary-footer .navigation .container {
+.primary-footer .navigation {
 	display: flex;
+	padding: 3.5em 0 2em 0;
 }
 
-/* display company logo and social media links one on top of each other */
-.primary-footer .connect {
+/* split container evenly in 2 */
+.primary-footer .company,
+.primary-footer .links {
+	flex-basis: 50%;
+}
+
+/* wrapper with company logo, tagline, social media links */
+.primary-footer .company {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	flex-grow: 1;
-	background: mediumturquoise;
+}
+
+/* increase font size of company tagline */
+.primary-footer .company p {
+	font-size: 1.5em;
 }
 
 /* display navigation links lists next to each other */
 .primary-footer .links {
 	display: flex;
-	flex-grow: 1.2;
-	background: mediumseagreen;
+	gap: 220px;
 }
 
+/* navigation links lists headings */
+.primary-footer .links h2 {
+	font-size: 1.35em;
+	font-weight: 300;
+	margin-bottom: 1em;
+}
+
+/* enable flexbox on links lists to use gap property */
+.primary-footer .links ul {
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+	font-size: 1.05em;
+}
+
+.primary-footer .links a:hover {
+	text-decoration: underline rgba(0, 204, 204, 0.5);
+	text-underline-offset: 0.15em;
+}
+
+/* bottom section of footer */
 .primary-footer .copyright {
 	text-align: center;
+	font-size: 0.9em;
+	border-top: 1px solid #a7aab28c;
+	padding: 2.5em;
 }
 
-/* to remove */
-svg {
-	height: 10px;
-	width: 10px;
+/* link in first line of text within copyright section */
+.primary-footer .copyright a {
+	color: #fff;
+	font-weight: 400;
+	transition: color 0.3s;
+}
+
+.primary-footer .copyright a:hover {
+	text-shadow: 0 0 1px #d20094;
+	color: #d20094;
+}
+
+/* first p element in copyright section */
+.primary-footer .copyright > p {
+	margin-bottom: 0.8em;
 }
