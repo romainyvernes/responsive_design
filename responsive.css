@@ -362,4 +362,9 @@
   .primary-footer .container {
     padding: 0 1.5em;
   }
+
+  .primary-footer .links {
+    gap: 0;
+    justify-content: space-between;
+  }
 }
