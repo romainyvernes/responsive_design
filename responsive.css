@@ -11,8 +11,14 @@
     height: 56px;
   }
 
+  /* change logo color to dark grey */
   .primary-header .company-logo {
-    color: #999;
+    filter: invert(70%);
+  }
+
+  /* change color back to black on hover */
+  .primary-header .company-logo:hover {
+    filter: none;
   }
 
   .primary-header .navigation {
@@ -22,10 +28,6 @@
     color: #a7aab1;
     background: #fff;
     box-shadow: 0 20px 40px 5px rgba(80,80,80, 0.1)
-  }
-
-  .primary-header .home-link svg {
-    fill: #a7aab1;
   }
 
   /* show link to access sidebar */
@@ -171,15 +173,21 @@
 
 /* mobile layout */
 @media (max-width: 767px) {
-  /* bring all sections closer together and narrow them on either side */
+  /* move all sections further apart */
   .container {
-    padding: 0 1em;
+    margin: 4em auto;
   }
 
   /* applies to all h2 elements in the main section of the page (i.e., not in
   the page header or footer */
   .home h2 {
     text-align: center;
+    font-size: 1.7em;
+  }
+
+  /* narrow container width */
+  .showcase .container {
+    padding: 0 0.5em;
   }
 
   /* hide default "buy" article */
@@ -215,6 +223,11 @@
     min-width: 80vw;
   }
 
+  /* narrow container width */
+  .latest .container {
+    padding: 0 1.5em;
+  }
+
   /* remove grid display to set up items within list according to their default
   display (i.e., one on top of the other) */
   .latest ul {
@@ -228,17 +241,60 @@
     gap: 20px;
   }
 
-  .latest .thumbnail img {
-    flex-basis: 10%;
+  /* set width of articles images */
+  .latest .thumbnail .wrapper {
+    flex-basis: 25%;
+    min-width: 0;
+    position: relative;
   }
 
+  /* set width of articles headlines */
   .latest .thumbnail .headline {
-    flex-basis: 90%;
+    flex-basis: 75%;
+    min-width: 0;
+  }
+
+  .latest .thumbnail .wrapper::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .latest .thumbnail img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
   }
 
   /* enlarge "all news" link to take up entire window width */
   .latest .all a {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* position text at the center, and the icon next to it at the far right of
+  the container */
+  .latest .all span,
+  .latest .all i {
+    margin-left: auto;
+  }
+
+  /* narrow container width */
+  .channels .container {
+    padding: 4em 1em;
+  }
+
+  /* narrow container width */
+  .recommendations .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* display player and selection vertically */
@@ -246,12 +302,46 @@
     flex-direction: column;
   }
 
+  /* youtube video container */
+  .recommendations iframe {
+    height: 100%;
+  }
+
+  .recommendations .player h3 {
+    font-size: 1.1em;
+  }
+
+  .recommendations .side {
+    min-height: 237px;
+  }
+
   /* position elements within selection horizontally */
   .recommendations .selection {
     flex-direction: row;
-    flex-basis: 224px;
-    height: 237px;
-    padding: 0;
+    padding: 0 1.5em;
+  }
+
+  /* selection thumbnails */
+  .recommendations .selection li {
+    min-width: 224px;
+  }
+
+  /* images within thumbnails */
+  .recommendations .selection img {
+    height: 117px;
+  }
+
+  .recommendations .selection h3 {
+    font-size: 0.9em;
+  }
+
+  /* narrow container width */
+  .jobs .container {
+    padding: 0 1.5em;
+  }
+
+  .jobs .description {
+    text-align: center;
   }
 
   /* position description and illustrations vertically */
@@ -263,7 +353,13 @@
     grid-auto-rows: 168px;
   }
 
+  /* logos */
   .jobs .illustrations img {
     height: 96px;
+  }
+
+  /* narrow container width */
+  .primary-footer .container {
+    padding: 0 1.5em;
   }
 }
